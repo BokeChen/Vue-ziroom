@@ -1,10 +1,9 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
-    <Footer></Footer>
+    <Footer activeTapIndex="0"></Footer>
   </div>
 </template>
-
 <script>
 import Footer from '../../components/Footer.vue';
 export default {
@@ -15,12 +14,12 @@ export default {
     }
   },
   components:{
-        Footer
+        Footer,//子组件声明
     }
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+  
 </style>
