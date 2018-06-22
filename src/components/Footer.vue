@@ -18,7 +18,7 @@ export default {
    props: ["activeTapIndex"],//父组件的传值，告诉子组件要激活的选项
   data () {
     return {
-      links: ['/home','/apartment','/postStacks','lifeService','/main'],//导航的路由
+      links: ['/home','/apartment','/postStacks','lifeService','/mine'],//导航的路由
       linkContent: ['合租/整租','自如寓','民宿/驿栈','生活服务','我的'],//导航栏文字说明
     }
     } 
@@ -48,7 +48,7 @@ export default {
               width:49rem/@rootFontSize;
               height:45rem/@rootFontSize;
               background:url(../assets/IconList1.png) no-repeat 0 0;
-              background-size:736rem/@rootFontSize 518rem/@rootFontSize; //限制背景图的大小
+              background-size:@IconListWidth @IconListheight; //限制背景图的大小
             }
           }
          li:nth-child(1) .footer-Icon{
@@ -87,12 +87,12 @@ export default {
          .activeColor3{
         p{color:@comonColorBlack;}//被激活的菜单，字体变黑显示
         .footer-Icon{
-           background-position: -446rem/@rootFontSize -70rem/@rootFontSize !important;//雪碧图的取图方法
+           background-position: -446rem/@rootFontSize -74rem/@rootFontSize !important;//雪碧图的取图方法
         }}
          .activeColor4{
         p{color:@comonColorBlack;}//被激活的菜单，字体变黑显示
         .footer-Icon{
-           background-position: 594rem/@rootFontSize -70rem/@rootFontSize !important;//雪碧图的取图方法
+           background-position: -594rem/@rootFontSize -74rem/@rootFontSize !important;//雪碧图的取图方法
         }}
   }
 </style>
