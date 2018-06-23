@@ -1,5 +1,6 @@
 <template>
   <header class="header">
+    <div>
      <p v-if="bannerScrollTop<50">
       <img class="header-logo" v-bind:src="require('../assets/ziroomlogo.png')"/>
       <span class="header-province">{{province}}</span>
@@ -10,6 +11,7 @@
      </p>
      
       <span class="header-msgTip"></span>
+      </div>
   </header>
 </template>
 
@@ -33,6 +35,8 @@ export default {
     height:76rem/@rootFontSize;
     line-height:70rem/@rootFontSize;
     background-color:@comonColorWhite;
+   div{
+    
     position:relative;
     p{height:100%;line-height:76rem/@rootFontSize;}
     .header-logo{
@@ -79,5 +83,6 @@ export default {
       background-size:@IconListWidth @IconListheight;
 
     }
+   }
   }
 </style>

@@ -138,6 +138,12 @@ body {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
 .footer {
   position: fixed;
   bottom: 0;
