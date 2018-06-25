@@ -9,6 +9,7 @@
       </ul>
       <button class="main-ad-searchBtn"></button>
     </div>
+       <!-- 通用模块1 -->
     <div class="rentInfo">
      <h3>租房情报局</h3>
      <p class="rentInfo-hTip">带你发现居住的另一种选择</p>
@@ -45,7 +46,7 @@
     </ul>
     </div>
   
-
+   <!-- 通用模块2 -->
    <div class="zryj">
    <h3 class="zryj-title-h3">自如友家 <span>查看更多<i></i></span></h3>
    <p class="zryj-title-p">百万自如客的品质合租公寓</p>
@@ -66,25 +67,38 @@
    </li>
    </ul>
    </div>
-  <div>
-   <ul>
-   <li><img/></li>
-   </ul>
-   <ul><li></li></ul>
-  </div>
 
-   <div>
-   <h3>自如客转租<span>查看更多</span></h3>
-   <span>传递你我的自如生活</span>
-   <ul class="rentInfo">
-    <li>
-      <div>
-      <img/> <span></span>
-       <p>屋子有超大的阳台，差不多20平</p>
+
+  <!-- 通用模块3 -->
+  <div class="banner">
+   <ul class="banner-ul">
+   <li><img src="./images/banner1.png"/></li>
+   <li><img src="./images/banner1.png"/></li>
+   </ul>
+   <ul class="banner-dot"><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ul>
+  </div>
+  <!-- 通用模块4 -->
+   <div class="zrkzz">
+   <h3>自如客转租<span>查看更多<i></i></span></h3>
+   <p class="zrkzz-title-p">传递你我的自如生活</p>
+   <ul class="zrkzz-ul">
+    <li class="zrkzz-li">
+      <div class="zrkzz-profile">
+      <img src="./images/leiyang.png"/> <span>雷扬</span>
+       <p  >屋子有超大的阳台，差不多20平，因为工作原因转租出去，出门就有918路公交车</p>
       </div>
-      <img/>
-      <p></p>
-      <p></p>
+      <img class="zrkzz-img" src="./images/leiyang_1.png"/>
+      <p class="zrkzz-des">顺义城<b class="P-dot"></b>裕龙一区3居室<b class="P-dot"></b>南卧</p>
+      <p class="zrkzz-m">￥2160/月</p>
+    </li>
+      <li class="zrkzz-li">
+      <div class="zrkzz-profile">
+      <img src="./images/leiyang.png"/> <span>雷扬</span>
+       <p  >屋子有超大的阳台，差不多20平，因为工作原因转租出去，出门就有918路公交车</p>
+      </div>
+      <img class="zrkzz-img" src="./images/leiyang_1.png"/>
+      <p class="zrkzz-des">顺义城<b class="P-dot"></b>裕龙一区3居室<b class="P-dot"></b>南卧</p>
+      <p class="zrkzz-m">￥2160/月</p>
     </li>
    </ul>
    
@@ -115,6 +129,7 @@ export default {
     @import "../../style/mixin.less";
   .main{
     background-color:white;
+    padding-bottom:120rem/@rootFontSize;
     .main-ad{
       position:relative;
       img{vertical-align:bottom;height:560rem/@rootFontSize;}
@@ -178,12 +193,13 @@ export default {
        display:flex;
        overflow-x:auto;
        .rentInfo-list-li{
+         margin:0.5rem 0 ;
          width:275rem/@rootFontSize;
          padding:25rem/@rootFontSize 15rem/@rootFontSize 0;
          background-color:@comonColorWhite;
          margin-right:16rem/@rootFontSize;
          margin-left: 0.1rem/@rootFontSize;
-         box-shadow:0 0 30rem/@rootFontSize #ddd ;
+         box-shadow:0 0 20rem/@rootFontSize #ddd ;
          img{
            width:245rem/@rootFontSize;
            height:160rem/@rootFontSize;
@@ -267,7 +283,125 @@ export default {
      border-radius:5rem/@rootFontSize;
      background-color:black;
    }
+  .banner{
+    padding:40rem/@rootFontSize 0;
+    border-bottom:0.5rem/@rootFontSize;
+    position:relative;
+    
+  }
+  .banner-ul{
+    overflow-x:auto;
+    display:flex;
+    li{
+      padding: 0 40rem/@rootFontSize;
+    }
+    
+  }
+  .banner-dot{
+      position:absolute;
+      bottom:72rem/@rootFontSize;
+      width: 100%;
+      text-align: center;
+      li{
+        display:inline-block;
+        width:13rem/@rootFontSize;
+        height:13rem/@rootFontSize;
+        border-radius:13rem/@rootFontSize;
+        border:2rem/@rootFontSize solid white;
+        margin-left:16.7rem/@rootFontSize;
+      }
+    }
 
+    .zrkzz{
+     padding-top:40rem/@rootFontSize;
+     padding-bottom:44rem/@rootFontSize;
+      border-bottom:0.5rem/@rootFontSize solid #ddd;
+      h3{
+        height:64rem/@rootFontSize;
+        line-height:64rem/@rootFontSize;
+        font-size:38rem/@rootFontSize;
+        font-weight:bold;
+        padding-left:44rem/@rootFontSize;
+        span{
+          float:right;
+          font-size:30rem/@rootFontSize;
+          font-weight:normal;
+          color:rgb(194,194,194);
+          padding-right:32rem/@rootFontSize;
+          i{
+          display:inline-block;
+          width:28rem/@rootFontSize;
+          height:36rem/@rootFontSize;
+          padding-left:5rem/@rootFontSize;
+          background:url(./images/rightArrow.png) no-repeat 5rem/@rootFontSize 6rem/@rootFontSize;
+          background-size:100% 100%;
+        }
+        }
+      }
+      .zrkzz-title-p{
+        padding:20rem/@rootFontSize 0 35rem/@rootFontSize   44rem/@rootFontSize ;
+         font-size:26rem/@rootFontSize;
+         color:@fontGray;
+      }
+      .zrkzz-ul{
+        overflow-x:auto;
+        padding:0 37rem/@rootFontSize;
+        display:flex;
+      }
+      .zrkzz-li{
+        width:464rem/@rootFontSize;
+        padding:27rem/@rootFontSize 23rem/@rootFontSize;
+        box-shadow:0 0 20rem/@rootFontSize #ddd ;
+        margin:5rem/@rootFontSize 20rem/@rootFontSize 5rem/@rootFontSize 0;
+       
+      }
+      .zrkzz-profile{
+        img{
+          width:63rem/@rootFontSize;
+          height:63rem/@rootFontSize;
+          margin-right:20rem/@rootFontSize;
+          vertical-align:middle;
+        }
+        span{
+          display:inline-block;
+          height:63rem/@rootFontSize;
+          line-height:63rem/@rootFontSize;
+          font-size:34rem/@rootFontSize;
+          font-weight:bold;
+        }
+        p{
+          margin-top:10rem/@rootFontSize;
+          margin-bottom:23rem/@rootFontSize;
+          font-size:25rem/@rootFontSize;
+          // line-height:40rem/@rootFontSize;
+          height:62rem/@rootFontSize;
+          color:@fontGray;
+          overflow : hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          -webkit-box-orient: vertical;
+   
+        }
+        
+      }
+      .zrkzz-img{
+          width:416rem/@rootFontSize;
+          height:280rem/@rootFontSize;
+        }
+        .zrkzz-des{
+          font-size:28rem/@rootFontSize;
+          color:@comonColorGraydark;
+          margin:25rem/@rootFontSize 0 20rem/@rootFontSize 0;
+          b{
+            background-color:@fontGray;
+          }
+        }
+        .zrkzz-m{
+          font-size:28rem/@rootFontSize;
+          font-weight:bold;
+        }
+    }
 
   }
 </style>

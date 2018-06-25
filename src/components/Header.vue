@@ -42,7 +42,8 @@ export default {
     .header-logo{
      padding-left:28rem/@rootFontSize;
      padding-right:30rem/@rootFontSize;
-     padding-top:19rem/@rootFontSize;
+     padding-top:20rem/@rootFontSize;
+     vertical-align:top;
     }
     .header-province{
       font-size:24rem/@rootFontSize;

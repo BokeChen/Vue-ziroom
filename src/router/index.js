@@ -9,11 +9,7 @@ const lifeService = r => require.ensure([], () => r(require('../page/lifeService
 const mine = r => require.ensure([], () => r(require('../page/mine/mine.vue')), 'mine');
 export default new Router({
   routes: [
-    {
-      path: '/',
-      name:"home",
-      component: home,
-    },
+   
     {
       path: '/home',
       name:"home",
