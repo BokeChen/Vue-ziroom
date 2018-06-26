@@ -12,11 +12,11 @@
     <!-- 通用模块1 -->
     <CommonUl1 :commonMoudleTitle="renInfoTitle" :commonMoudleUl="renInfoUl"></CommonUl1>
     <!-- 通用模块2 -->
-    <CommonUl2></CommonUl2>
+    <CommonUl2 :commonMoudleTitle="zryjTitle" :commonMoudleUl="zryjUl"></CommonUl2>
     <!-- 通用模块3 -->
-    <CommonUl3></CommonUl3>
+    <CommonUl3 :imgList="bannerList" ></CommonUl3>
     <!-- 通用模块4 -->
-    <CommonUl4></CommonUl4>
+    <CommonUl4 :commonMoudleTitle="zrkzzTitle" :commonMoudleUl="zrkzzUl" ></CommonUl4>
     <Footer activeTapIndex="0"></Footer>
   </div>
 </template>
@@ -32,7 +32,14 @@ export default {
   data () {
     return {
       renInfoTitle:["租房情报局","带你发现居住的另一种选择"],
-      renInfoUl: [{'img':"./images/rentInfo1.png","title":"都市租客图鉴","des":"助力毕业生找室友","link":""},{'img':"../page/home/images/rentInfo2.png","title":"自如惠蕾计划","des":"实习生租房1470","link":""}]
+      renInfoUl: [{'img':"/static/images/rentInfo1.png","title":"都市租客图鉴","des":"助力毕业生找室友","link":""},{'img':"/static/images/rentInfo2.png","title":"自如惠蕾计划","des":"实习生租房1470","link":""}],
+      zryjTitle:["自如友家","百万自如客的品质合租公寓"],
+      zryjUl: [{'img':"/static/images/zryj_01.png","area":"石景山","direct":"朝南","mark":"独立卫生间","money":"3990","link":""},{'img':"/static/images/zryj_01.png","area":"石景山","direct":"朝南","mark":"独立卫生间","money":"3990","link":""}],
+      bannerList:["/static/images/banner1.png","/static/images/banner2.png"],
+      zrkzzTitle:["自如客转租","传递你我的自如生活"],
+      zrkzzUl:[{"profile":"/static/images/circleBtn.png","name":"雷杨","des":"屋子有超大的阳台，差不多20平，因为工作原因转租出去，出门有918路公交车","img":"/static/images/leiyang_1.png","area":"顺义城","direct":"裕龙一区3居室","mark":"南卧","money":"2160","link":""},
+      {"profile":"/static/images/circleBtn.png","name":"雷杨","des":"屋子有超大的阳台，差不多20平，因为工作原因转租出去，出门有918路公交车","img":"/static/images/leiyang_1.png","area":"顺义城","direct":"裕龙一区3居室","mark":"南卧","money":"2160","link":""}
+      ]
     }
   },
   components:{

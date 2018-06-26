@@ -1,22 +1,15 @@
 <template>
    <!-- 通用模块2 -->
      <div class="zryj">
-   <h3 class="zryj-title-h3">自如友家 <span>查看更多<i></i></span></h3>
-   <p class="zryj-title-p">百万自如客的品质合租公寓</p>
+   <h3 class="zryj-title-h3">{{commonMoudleTitle[0]}} <span>查看更多<i></i></span></h3>
+   <p class="zryj-title-p">{{commonMoudleTitle[1]}}</p>
    <ul class="zryj-ul">
-   <li class="zryj-li">
-   <img src="../page/home/images/zryj_01.png"/>
+   <li class="zryj-li" v-for="item in commonMoudleUl">
+   <img :src="item.img"/>
    <div >
-   <p>石景山<b class="P-dot"></b>朝南<b class="P-dot"></b>独立卫生间</p>
-   <span>￥3990/月</span>
+   <p>{{item.area}}<b class="P-dot"></b>{{item.direct}}<b class="P-dot"></b>{{item.mark}}</p>
+   <span>￥{{item.money}}/月</span>
     </div>
-   </li>
-   <li class="zryj-li">
-   <img src="../page/home/images/zryj_01.png"/>
-   <div>
-   <p>石景山 <b class="P-dot"></b>朝南<b class="P-dot"></b> 独立卫生间</p>
-   <span>￥3990/月</span>
-   </div>
    </li>
    </ul>
    </div>
@@ -25,7 +18,7 @@
 <script>
 export default {
   name: 'CommonUl1',
-   props: [],//父组件的传值，告诉子组件要激活的选项
+  props: ["commonMoudleTitle","commonMoudleUl"],//父组件的传值，告诉子组件要激活的选项
   data () {
     return {
       links: ['/home','/apartment','/postStacks','lifeService','/mine'],//导航的路由

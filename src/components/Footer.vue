@@ -35,7 +35,7 @@ export default {
      ul{
          display:flex;
          justify-content: space-between;
-           p{color:@comonColorGray;}
+           p{color:@comonColorGraydark;}
       }
 
         //li 单独放出来了是为了缩减选择器的层级，推荐选择器的层级最好不大于3级

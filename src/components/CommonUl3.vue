@@ -2,21 +2,20 @@
    <!-- 通用模块3 -->
   <div class="banner">
    <ul class="banner-ul">
-   <li><img src="../page/home/images/banner1.png"/></li>
-   <li><img src="../page/home/images/banner1.png"/></li>
+   <li v-for="item in imgList "><img :src="item"/></li>
+   
    </ul>
-   <ul class="banner-dot"><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ul>
+   <ul class="banner-dot"><li v-for="item in imgList"></li></ul>
   </div>
 </template>
 
 <script>
 export default {
   name: 'CommonUl3',
-   props: [],//父组件的传值，告诉子组件要激活的选项
+   props: ["imgList"],//父组件的传值，告诉子组件要激活的选项
   data () {
     return {
-      links: ['/home','/apartment','/postStacks','lifeService','/mine'],//导航的路由
-      linkContent: ['合租/整租','自如寓','民宿/驿栈','生活服务','我的'],//导航栏文字说明
+   
     }
     } 
 }

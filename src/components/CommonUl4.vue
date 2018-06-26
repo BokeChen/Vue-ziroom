@@ -1,26 +1,17 @@
 <template>
    <!-- 通用模块4 -->
      <div class="zrkzz">
-   <h3>自如客转租<span>查看更多<i></i></span></h3>
-   <p class="zrkzz-title-p">传递你我的自如生活</p>
+   <h3>{{commonMoudleTitle[0]}}<span>查看更多<i></i></span></h3>
+   <p class="zrkzz-title-p">{{commonMoudleTitle[1]}}</p>
    <ul class="zrkzz-ul">
-    <li class="zrkzz-li">
+    <li class="zrkzz-li" v-for="item in commonMoudleUl">
       <div class="zrkzz-profile">
-      <img src="../page/home/images/leiyang.png"/> <span>雷扬</span>
-       <p  >屋子有超大的阳台，差不多20平，因为工作原因转租出去，出门就有918路公交车</p>
+      <img :src="item.profile"/> <span>{{item.name}}</span>
+       <p  >{{item.des}}</p>
       </div>
-      <img class="zrkzz-img" src="../page/home/images/leiyang_1.png"/>
-      <p class="zrkzz-des">顺义城<b class="P-dot"></b>裕龙一区3居室<b class="P-dot"></b>南卧</p>
-      <p class="zrkzz-m">￥2160/月</p>
-    </li>
-      <li class="zrkzz-li">
-      <div class="zrkzz-profile">
-      <img src="../page/home/images/leiyang.png"/> <span>雷扬</span>
-       <p  >屋子有超大的阳台，差不多20平，因为工作原因转租出去，出门就有918路公交车</p>
-      </div>
-      <img class="zrkzz-img" src="../page/home/images/leiyang_1.png"/>
-      <p class="zrkzz-des">顺义城<b class="P-dot"></b>裕龙一区3居室<b class="P-dot"></b>南卧</p>
-      <p class="zrkzz-m">￥2160/月</p>
+      <img class="zrkzz-img" :src="item.img"/>
+      <p class="zrkzz-des">{{item.area}}<b class="P-dot"></b>{{item.direct}}<b class="P-dot"></b>{{item.mark}}}</p>
+      <p class="zrkzz-m">￥{{item.money}}/月</p>
     </li>
    </ul>
    </div>
@@ -30,11 +21,10 @@
 <script>
 export default {
   name: 'CommonUl4',
-   props: [],//父组件的传值，告诉子组件要激活的选项
+   props: ["commonMoudleTitle","commonMoudleUl"],//父组件的传值，告诉子组件要激活的选项
   data () {
     return {
-      links: ['/home','/apartment','/postStacks','lifeService','/mine'],//导航的路由
-      linkContent: ['合租/整租','自如寓','民宿/驿栈','生活服务','我的'],//导航栏文字说明
+ 
     }
     } 
 }
@@ -43,6 +33,17 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less" scoped>
  @import "../style/mixin.less";
+   .P-dot{
+     display:inline-block;
+     position:relative;
+     bottom:0rem/@rootFontSize;
+     left:0rem/@rootFontSize;
+     width:5rem/@rootFontSize;
+     height:5rem/@rootFontSize;
+     margin:10rem/@rootFontSize;
+     border-radius:5rem/@rootFontSize;
+     background-color:black;
+   }
    .zrkzz{
      padding-top:40rem/@rootFontSize;
      padding-bottom:44rem/@rootFontSize;
@@ -79,6 +80,9 @@ export default {
         padding:0 37rem/@rootFontSize;
         display:flex;
       }
+      zrkzz-li:last-child{
+        margin-right:20rem/@rootFontSize;
+      }
       .zrkzz-li{
         width:464rem/@rootFontSize;
         padding:27rem/@rootFontSize 23rem/@rootFontSize;
@@ -105,7 +109,7 @@ export default {
           margin-bottom:23rem/@rootFontSize;
           font-size:25rem/@rootFontSize;
           // line-height:40rem/@rootFontSize;
-          height:62rem/@rootFontSize;
+          height:70rem/@rootFontSize;
           color:@fontGray;
           overflow : hidden;
           text-overflow: ellipsis;
