@@ -2,8 +2,13 @@
    <!-- 通用模块3 -->
   <div class="banner">
    <ul class="banner-ul">
-   <li v-for="item in imgList "><img :src="item"/></li>
    
+   <li class="banner-li" v-for="item in imgList ">
+   <router-link to="/homeChild">
+   <img :src="item"/>
+    </router-link>
+   </li>
+  
    </ul>
    <ul class="banner-dot"><li v-for="item in imgList"></li></ul>
   </div>
@@ -44,7 +49,7 @@ export default {
   .banner-ul{
     overflow-x:auto;
     display:flex;
-    li{
+    .banner-li{
       padding: 0 40rem/@rootFontSize;
     }
     

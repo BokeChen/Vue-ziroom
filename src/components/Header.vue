@@ -1,16 +1,16 @@
 <template>
   <header class="header">
     <div>
-     <p v-if="bannerScrollTop<50">
+    
+     <p v-if="bannerScrollTop<150">
       <img class="header-logo" v-bind:src="require('../assets/ziroomlogo.png')"/>
       <span class="header-province">{{province}}</span>
      </p>
-     <p v-else>
+     <p v-if="bannerScrollTop>=150">
      <i class="header-serchIcon"></i>
-      <input class="header-searchInp" type="text"  />
+      <input class="header-searchInp" type="text" placeholder="你想住哪儿" />
      </p>
-     
-      <span class="header-msgTip"></span>
+      <router-link to="/homeChild"><span class="header-msgTip"></span></router-link>
       </div>
   </header>
 </template>
@@ -38,7 +38,12 @@ export default {
    div{
     
     position:relative;
-    p{height:100%;line-height:76rem/@rootFontSize;}
+    overflow:hidden;
+    p{
+    height:100%;
+    line-height:76rem/@rootFontSize;
+    display:inline-block;
+    }
     .header-logo{
      padding-left:28rem/@rootFontSize;
      padding-right:30rem/@rootFontSize;
@@ -48,7 +53,6 @@ export default {
     .header-province{
       font-size:24rem/@rootFontSize;
       padding-right:24rem/@rootFontSize;
-      
       background:url(../assets/IconList1.png) no-repeat -43rem/@rootFontSize -138rem/@rootFontSize;
       background-size:@IconListWidth @IconListheight;
     }

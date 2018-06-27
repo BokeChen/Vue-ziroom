@@ -3,15 +3,17 @@
     <div class="rentInfo">
      <h3>{{commonMoudleTitle[0]}}</h3>
      <p class="rentInfo-hTip">{{commonMoudleTitle[1]}}</p>
-    
     <ul class="rentInfo-list">
     <li class="rentInfo-list-li" v-for="item in commonMoudleUl">
+    <router-link to="/homeChild">
       <img :src="item.img"/>
       <div class="rentInfo-li-div">
        <p>{{item.title}}</p>
        <span class="ellipsis">{{item.des}}</span>
       </div>
+      </router-link>
     </li>
+    <li class="rentInfo-list-li last-li"></li>
     </ul>
     </div>
 </template>
@@ -62,6 +64,11 @@ export default {
            height:160rem/@rootFontSize;
          }
        }
+      .last-li{
+        padding-left:12rem/@rootFontSize;
+        padding-right:12rem/@rootFontSize;
+        box-shadow:none;
+    }
      }
      .rentInfo-li-div{
        padding:30rem/@rootFontSize 0;
@@ -79,4 +86,5 @@ export default {
      }
 
     }
+   
 </style>

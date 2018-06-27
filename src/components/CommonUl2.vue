@@ -5,11 +5,16 @@
    <p class="zryj-title-p">{{commonMoudleTitle[1]}}</p>
    <ul class="zryj-ul">
    <li class="zryj-li" v-for="item in commonMoudleUl">
+   <router-link to="/homeChild">
    <img :src="item.img"/>
    <div >
    <p>{{item.area}}<b class="P-dot"></b>{{item.direct}}<b class="P-dot"></b>{{item.mark}}</p>
    <span>￥{{item.money}}/月</span>
     </div>
+    </router-link>
+   </li>
+   <li class="zryj-li last-li" >
+   <p></p>
    </li>
    </ul>
    </div>
@@ -79,6 +84,11 @@ export default {
              font-weight:bold;
            }
          }
+       }
+       .last-li{
+         padding-left:11rem/@rootFontSize;
+         padding-right:11rem/@rootFontSize;
+         
        }
     }
      .P-dot{

@@ -7,9 +7,10 @@ const apartment = r => require.ensure([], () => r(require('../page/apartment/apa
 const postStacks = r => require.ensure([], () => r(require('../page/postStacks/postStacks.vue')), 'postStacks');
 const lifeService = r => require.ensure([], () => r(require('../page/lifeService/lifeService.vue')), 'lifeService');
 const mine = r => require.ensure([], () => r(require('../page/mine/mine.vue')), 'mine');
+const homeChild = r => require.ensure([], () => r(require('../page/home/children/homeChild.vue')), 'homeChild');
+
 export default new Router({
   routes: [
-   
     {
       path: '/home',
       name:"home",
@@ -34,6 +35,11 @@ export default new Router({
       path: '/lifeService',
       name:"lifeService",
       component: lifeService,
+    },
+    {
+      path: '/homeChild',
+      name:"homeChild",
+      component: homeChild,
     },
     {
       path:'',

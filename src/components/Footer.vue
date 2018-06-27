@@ -2,7 +2,6 @@
   <div class="footer">
      <ul class="footer-ul">
       <li v-for="(item ,index) in links">
-      
         <router-link v-bind:to="item" v-bind:class="(index==activeTapIndex)?('activeColor'+index):''">
          <i class="footer-Icon"></i>
          <p> {{linkContent[index]}}</p>
@@ -18,7 +17,7 @@ export default {
    props: ["activeTapIndex"],//父组件的传值，告诉子组件要激活的选项
   data () {
     return {
-      links: ['/home','/apartment','/postStacks','lifeService','/mine'],//导航的路由
+      links: ['/home','/apartment','/postStacks','/lifeService','/mine'],//导航的路由
       linkContent: ['合租/整租','自如寓','民宿/驿栈','生活服务','我的'],//导航栏文字说明
     }
     } 
@@ -32,6 +31,7 @@ export default {
       height:120rem/@rootFontSize;
       width:100%;
       background-color:white;
+      border-top:1rem/@rootFontSize solid @comonColorGraydark;
      ul{
          display:flex;
          justify-content: space-between;

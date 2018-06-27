@@ -5,6 +5,7 @@
    <p class="zrkzz-title-p">{{commonMoudleTitle[1]}}</p>
    <ul class="zrkzz-ul">
     <li class="zrkzz-li" v-for="item in commonMoudleUl">
+    <router-link to="/homeChild">
       <div class="zrkzz-profile">
       <img :src="item.profile"/> <span>{{item.name}}</span>
        <p  >{{item.des}}</p>
@@ -12,7 +13,9 @@
       <img class="zrkzz-img" :src="item.img"/>
       <p class="zrkzz-des">{{item.area}}<b class="P-dot"></b>{{item.direct}}<b class="P-dot"></b>{{item.mark}}}</p>
       <p class="zrkzz-m">￥{{item.money}}/月</p>
+      </router-link>
     </li>
+    <li class="zrkzz-li last-li"></li>
    </ul>
    </div>
 
@@ -89,6 +92,11 @@ export default {
         box-shadow:0 0 20rem/@rootFontSize #ddd ;
         margin:5rem/@rootFontSize 20rem/@rootFontSize 5rem/@rootFontSize 0;
        
+      }
+      .last-li{
+        padding-left:11rem/@rootFontSize;
+        padding-right:11rem/@rootFontSize;
+        box-shadow:none;
       }
       .zrkzz-profile{
         img{
